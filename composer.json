@@ -1,0 +1,29 @@
+{
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-pdo_mysql": "*",
+        "zordius/lightncandy": "dev-master",
+        "firebase/php-jwt": "^3.0",
+        "slim/slim": "^3.0",
+        "abeautifulsite/simpleimage": "^2.6",
+        "erusev/parsedown": "^1.6",
+        "tinymce/tinymce": "^4.3",
+        "mpratt/embera": "^1.9"
+    },
+    "config": {
+        "vendor-dir": "app/source/vendor"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "gulp build"
+        ],
+        "post-install-cmd": [
+            "npm install",
+            "gulp build"
+        ]
+    }
+}
